@@ -1,92 +1,15 @@
-<a id="footnote-1"></a>
-# Markdown基本语法
+## 2.0 Servlet简介
 ---
-## 多级标题
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
+Servlet是用Java编写的服务器端程序，主要功能在于交互式地浏览和修改数据，生成动态Web内容。它是作为来自Web浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。
 
-## 字体特效
+## 2.1 Servlet生命周期
 ---
-**强调**
-_斜体_
-_**强调的斜体**_ 
-~~删除~~  
-## 超链接
----
-[我是外链的超链接](http://www.baidu.com),
-markdown对链接的语法为：`[]()`,如：`[我是外链的超链接](http://www.baidu.com)`  
-试试页内的超链接：[我是页内的超链接](#footnote-1)，注：你先要在要跳转的到地方放置一个类似：`<a id="footnote-1">任意内容</a>`的锚点。由`id="footnote-1"`来匹配。
+Servlet 生命周期可被定义为从创建直到毁灭的整个过程。以下是 Servlet 遵循的过程：
 
-## 有序列表
----
-1. 有序列表 1  
-2. 有序列表 2  
-3. 有序列表 3
+1.Servlet 通过调用 init () 方法进行初始化。
 
-## 无序列表
----
-* 无序列表 1
-* 无序列表 2 
-* 无序列表 3
+2.Servlet 调用 service() 方法来处理客户端的请求。
 
-## 引用块
----
-只需要在前面加 `>`,如下:
+3.Servlet 通过调用 destroy() 方法终止（结束）。
 
-> 我是引用块
-
-
-## 再看看代码块显示效果
----
-markdown对代码块的语法是开始和结束行都要添加：\`\`\`,其中 \` 为windows键盘左上角那个，如下：
-
-```
-
-package fruitdiscernsystem;
-public class Circle {
-    private int x,y,r;
-    public Circle(int x, int y, int r) {
-        this.x = x;
-        this.y = y;
-        this.r = r;
-    }
-    public Circle() {
-    }
-    public int getX() {
-        return x;
-    }
-    public int getY() {
-        return y;
-    }
-    public int getR() {
-        return r;
-    }
-    public void setX(int x) {
-        this.x = x;
-    }
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public void setR(int r) {
-        this.r = r;
-    }   
-}
-
-```
-
-
-# 表格表示
----
-| 靠左 | 居中 | 靠右 |
-| :--- | :---: | ---: |
-| 靠左 | 居中 | 靠右 |
-
-
-
-
-
+4.最后，Servlet 是由 JVM 的垃圾回收器进行垃圾回收的。
